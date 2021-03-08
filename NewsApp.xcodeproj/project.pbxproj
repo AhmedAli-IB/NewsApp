@@ -11,8 +11,6 @@
 		60A9E30925F6478D00FA27C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A9E30825F6478D00FA27C5 /* ContentView.swift */; };
 		60A9E30B25F6478F00FA27C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60A9E30A25F6478F00FA27C5 /* Assets.xcassets */; };
 		60A9E30E25F6478F00FA27C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60A9E30D25F6478F00FA27C5 /* Preview Assets.xcassets */; };
-		60A9E31925F6478F00FA27C5 /* NewsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A9E31825F6478F00FA27C5 /* NewsAppTests.swift */; };
-		60A9E32425F6478F00FA27C5 /* NewsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A9E32325F6478F00FA27C5 /* NewsAppUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +38,8 @@
 		60A9E30D25F6478F00FA27C5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		60A9E30F25F6478F00FA27C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60A9E31425F6478F00FA27C5 /* NewsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		60A9E31825F6478F00FA27C5 /* NewsAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAppTests.swift; sourceTree = "<group>"; };
 		60A9E31A25F6478F00FA27C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60A9E31F25F6478F00FA27C5 /* NewsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		60A9E32325F6478F00FA27C5 /* NewsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAppUITests.swift; sourceTree = "<group>"; };
 		60A9E32525F6478F00FA27C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,7 +111,6 @@
 		60A9E31725F6478F00FA27C5 /* NewsAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				60A9E31825F6478F00FA27C5 /* NewsAppTests.swift */,
 				60A9E31A25F6478F00FA27C5 /* Info.plist */,
 			);
 			path = NewsAppTests;
@@ -124,7 +119,6 @@
 		60A9E32225F6478F00FA27C5 /* NewsAppUITests */ = {
 			isa = PBXGroup;
 			children = (
-				60A9E32325F6478F00FA27C5 /* NewsAppUITests.swift */,
 				60A9E32525F6478F00FA27C5 /* Info.plist */,
 			);
 			path = NewsAppUITests;
@@ -137,6 +131,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 60A9E32825F6478F00FA27C5 /* Build configuration list for PBXNativeTarget "NewsApp" */;
 			buildPhases = (
+				60A9E33425F6494300FA27C5 /* Swift Lint */,
 				60A9E2FF25F6478D00FA27C5 /* Sources */,
 				60A9E30025F6478D00FA27C5 /* Frameworks */,
 				60A9E30125F6478D00FA27C5 /* Resources */,
@@ -254,6 +249,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		60A9E33425F6494300FA27C5 /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		60A9E2FF25F6478D00FA27C5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -268,7 +284,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60A9E31925F6478F00FA27C5 /* NewsAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +291,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60A9E32425F6478F00FA27C5 /* NewsAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
