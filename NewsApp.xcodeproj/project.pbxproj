@@ -11,6 +11,7 @@
 		60A9E30925F6478D00FA27C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A9E30825F6478D00FA27C5 /* ContentView.swift */; };
 		60A9E30B25F6478F00FA27C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60A9E30A25F6478F00FA27C5 /* Assets.xcassets */; };
 		60A9E30E25F6478F00FA27C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60A9E30D25F6478F00FA27C5 /* Preview Assets.xcassets */; };
+		60A9E39C25F6519E00FA27C5 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A9E39B25F6519E00FA27C5 /* Assets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		60A9E31A25F6478F00FA27C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60A9E31F25F6478F00FA27C5 /* NewsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60A9E32525F6478F00FA27C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60A9E39B25F6519E00FA27C5 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,9 +93,9 @@
 		60A9E30525F6478D00FA27C5 /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				60A9E34425F64D9700FA27C5 /* Resources */,
 				60A9E30625F6478D00FA27C5 /* NewsAppApp.swift */,
 				60A9E30825F6478D00FA27C5 /* ContentView.swift */,
-				60A9E30A25F6478F00FA27C5 /* Assets.xcassets */,
 				60A9E30F25F6478F00FA27C5 /* Info.plist */,
 				60A9E30C25F6478F00FA27C5 /* Preview Content */,
 			);
@@ -124,6 +126,23 @@
 			path = NewsAppUITests;
 			sourceTree = "<group>";
 		};
+		60A9E34425F64D9700FA27C5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				60A9E30A25F6478F00FA27C5 /* Assets.xcassets */,
+				60A9E34525F64DA900FA27C5 /* Generated */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		60A9E34525F64DA900FA27C5 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				60A9E39B25F6519E00FA27C5 /* Assets.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,6 +150,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 60A9E32825F6478F00FA27C5 /* Build configuration list for PBXNativeTarget "NewsApp" */;
 			buildPhases = (
+				60A9E34A25F64E8100FA27C5 /* Swift Gen */,
 				60A9E33425F6494300FA27C5 /* Swift Lint */,
 				60A9E2FF25F6478D00FA27C5 /* Sources */,
 				60A9E30025F6478D00FA27C5 /* Frameworks */,
@@ -141,6 +161,8 @@
 			dependencies = (
 			);
 			name = NewsApp;
+			packageProductDependencies = (
+			);
 			productName = NewsApp;
 			productReference = 60A9E30325F6478D00FA27C5 /* NewsApp.app */;
 			productType = "com.apple.product-type.application";
@@ -212,6 +234,8 @@
 				Base,
 			);
 			mainGroup = 60A9E2FA25F6478D00FA27C5;
+			packageReferences = (
+			);
 			productRefGroup = 60A9E30425F6478D00FA27C5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -268,6 +292,24 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
+		60A9E34A25F64E8100FA27C5 /* Swift Gen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Gen";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftgen >/dev/null; then\n  swiftgen\nelse\n  echo \"warning: SwiftGen not installed, download it from https://github.com/SwiftGen/SwiftGen\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -277,6 +319,7 @@
 			files = (
 				60A9E30925F6478D00FA27C5 /* ContentView.swift in Sources */,
 				60A9E30725F6478D00FA27C5 /* NewsAppApp.swift in Sources */,
+				60A9E39C25F6519E00FA27C5 /* Assets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

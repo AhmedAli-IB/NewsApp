@@ -1,0 +1,5 @@
+xcassets:
+  inputs: NewsApp/Resources
+  outputs:
+    - templateName: swift5
+      output: NewsApp/Resources/Generated/Assets.swift
