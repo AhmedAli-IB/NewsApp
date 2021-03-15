@@ -57,6 +57,7 @@ struct NewsListView: View {
                 }
             }.navigationBarTitle("What's New 🤍")
             .coordinateSpace(name: "pullToRefresh")
+    
             
         }.navigationViewStyle(StackNavigationViewStyle())
     }

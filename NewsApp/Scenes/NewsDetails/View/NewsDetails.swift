@@ -54,8 +54,7 @@ struct NewsDetails_Previews: PreviewProvider {
     static var previews: some View {
         let src =  Source(id: "", name: "source")
         let desc = "articleDescription articleDescription articleDescription📄"
-        let id = UUID()
-        let news = News(id: id,
+        let news = News(
                         source: src,
                         author: "author",
                         title: "title",

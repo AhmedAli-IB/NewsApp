@@ -20,7 +20,6 @@ class NewsViewModel: ObservableObject {
     private var isLoadingPage = false
     private var currentPage = 1
     
-    private let networkService = NetworkService()
     private var subscriptions = Set<AnyCancellable>()
     private let newsUseCase: NewsUseCaseType
     

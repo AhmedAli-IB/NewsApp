@@ -20,12 +20,11 @@ final class NewsUseCase: NewsUseCaseType {
     
     // MARK: - Properties
     //
-    // newtork service instance should be of type protoclol not of concrete class 🧠
-    private let networkService: NetworkService
+    private let networkService: NetworkServiceType
     
     // MARK: - Init
     
-    init(networkService: NetworkService) {
+    init(networkService: NetworkService = NetworkService() ) {
         self.networkService = networkService
     }
     
