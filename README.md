@@ -11,8 +11,7 @@ It follows MVVM software design pattern and is built with [Combine framework](ht
 
 <p align="center">
 
-  <img src="screenshots/home.png">
-  
-  <img src="screenshots/details.png">
+  <img src="Screenshots/home.png" width=200 height=400>
+  <img src="Screenshots/details.png" width=200 height=400>
 
 </p>
