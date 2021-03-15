@@ -9,3 +9,10 @@ It follows MVVM software design pattern and is built with [Combine framework](ht
 
 ● SwiftGen
 
+<p align="center">
+
+  <img src="screenshots/home.png">
+  
+  <img src="screenshots/details.png">
+
+</p>
